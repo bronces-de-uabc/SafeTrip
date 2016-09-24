@@ -5,6 +5,19 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Nombre">Nombre</string>
+    <string name="dato">Pablo</string>
+    <string name="email">email</string>
+    <string name="correo" />
+    <string name="contactos">Contactos de emergencia</string>
+    <string name="contacto1">Contacto 1</string>
+    <string name="contacto2">Contacto 2</string>
+    <string name="contacto3">Contacto 3</string>
+    <string name="btn1">Editar</string>
+    <string name="btn2">EDITAR</string>
+    <string name="btn3">EDITAR</string>
+    <string name="btnC">Lista</string>
+    <string name="textV">Lista</string>
     <string-array name="menu_list">
         <item>Inicio</item>
         <item>Perfil</item>
