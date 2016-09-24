@@ -1,17 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
     tools:context="com.example.erik.safetrip.MainActivity">
 
     <TextView
+        android:id="@+id/labelRegistro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onSendMessage"
+        android:text="@string/registro"
+        android:textSize="12pt"/>
+
+    <TextView
+        android:id="@+id/labelNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nombre"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="36dp"
+        android:layout_below="@+id/labelRegistro"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/nombreUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/labelNombre"
+        android:layout_below="@+id/labelNombre"
+        android:hint="@string/hintNombre"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/labelCorreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/correo"
+        android:layout_alignLeft="@+id/labelNombre"
+        android:layout_below="@+id/nombreUsuario"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/correoUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/labelNombre"
+        android:layout_below="@+id/labelCorreo"
+        android:hint="@string/hintCorreo"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/labelPassword0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/contrasenia"
+        android:layout_alignLeft="@+id/labelNombre"
+        android:layout_below="@+id/correoUsuario"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/password0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/labelNombre"
+        android:layout_below="@+id/labelPassword0"
+        android:hint="@string/hintPass"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/labelPassword1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/confirma"
+        android:layout_alignLeft="@+id/labelNombre"
+        android:layout_below="@+id/password0"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/password1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/labelNombre"
+        android:layout_below="@+id/labelPassword1"
+        android:hint="@string/hintPass"
+        android:ems="10" />
+
+    <Button
+        android:id="@+id/botonEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/password1"
+        android:onClick="onEnviaRegistro"
+        android:text="@string/enviar" />
+
+    <TextView
+        android:id="@+id/yaCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/yaCuenta"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/botonEnviar"
+        android:onClick="onYaCuenta"
+        android:layout_marginTop="10dp" />
+
 </RelativeLayout>

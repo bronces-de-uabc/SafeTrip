@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Safe Trip</string>
+    <string name="registro">REGISTRO</string>
+    <string name="nombre">Nombre:</string>
+    <string name="hintNombre">Nombre Apellido</string>
+    <string name="correo">Correo electrónico:</string>
+    <string name="hintCorreo">correo@domminio.com</string>
+    <string name="contrasenia">Contraseña:</string>
+    <string name="hintPass">*******</string>
+    <string name="confirma">Confirma contraseña:</string>
+    <string name="enviar">ENVIAR</string>
+    <string name="yaCuenta">Ya tengo una cuenta</string>
+    <string name="inicia_sesion">Inicia Sesión</string>
 </resources>
