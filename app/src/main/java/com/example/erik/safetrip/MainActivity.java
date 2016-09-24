@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.drawable.ColorDrawable;
 import android.app.Fragment;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -19,7 +21,16 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+public class MainActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
     private String[] titles;
     private ListView drawerList;
@@ -28,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
     private int currentPosition = 0;
     private Menu menuAux;
     private int materiaId;
+    private GoogleApiClient mGoogleApiClient;
+
+
 
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
         @Override
@@ -95,8 +109,42 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
 
+        if (mGoogleApiClient == null) {
+            mGoogleApiClient = new GoogleApiClient.Builder(this)
+                    .addConnectionCallbacks(this)
+                    .addOnConnectionFailedListener(this)
+                    .addApi(LocationServices.API)
+                    .build();
+        }
+
+    }
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+
     }
 
+    @Override
+    public void onConnected(@Nullable Bundle bundle) {
+
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        googleMap.addMarker(new MarkerOptions()
+                .position(new LatLng(12, 50))
+                .title("Marker"));
+        googleMap.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+//        GoogleApiClient mGoogleApiClient = new GoogleApiClient.Builder(this)
+//                .enableAutoManage(this /* FragmentActivity */,
+//                        this /* OnConnectionFailedListener */)
+//                .addApi(Map)
+//                .addScope(Drive.SCOPE_FILE)
+//                .build();
+    }
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -121,13 +169,6 @@ public class MainActivity extends AppCompatActivity {
     //Called whenever we call invalidateOptionsMenu()
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-// If the drawer is open, hide action items related to the content view
-        boolean drawerOpen = drawerLayout.isDrawerOpen(drawerList);
-        if(currentPosition == 1){
-
-        }else{
-            //menu.findItem(R.id.action_edit).setVisible(false);
-        }
         return super.onPrepareOptionsMenu(menu);
     }
 
