@@ -24,4 +24,11 @@
         <item>Informacion</item>
     </string-array>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_boton_flot">BotonFlot</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>
