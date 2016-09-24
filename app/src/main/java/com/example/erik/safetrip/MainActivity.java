@@ -19,6 +19,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.google.android.gms.maps.MapFragment;
+
 public class MainActivity extends AppCompatActivity {
 
     private String[] titles;
@@ -121,13 +123,7 @@ public class MainActivity extends AppCompatActivity {
     //Called whenever we call invalidateOptionsMenu()
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
-// If the drawer is open, hide action items related to the content view
-        boolean drawerOpen = drawerLayout.isDrawerOpen(drawerList);
-        if(currentPosition == 1){
 
-        }else{
-            //menu.findItem(R.id.action_edit).setVisible(false);
-        }
         return super.onPrepareOptionsMenu(menu);
     }
 
@@ -140,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
 
         switch(position) {
             case 0:
-                fragment = new InicioFragment();
+                fragment = MapFragment.newInstance();
                 break;
             case 1:
                 fragment = new PerfilFragment();
