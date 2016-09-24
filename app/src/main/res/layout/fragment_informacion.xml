@@ -1,9 +1,82 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+
     tools:context="com.example.erik.safetrip.InformacionFragment">
+    <!--Dropdowmn-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/siniestros"
+        />
+    <Spinner
+        android:id="@+id/spinnerSiniestro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:columnCount="2"
+        >
+        <EditText
+            android:id="@+id/etFecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:text="testTime"
+            android:layout_column="0"
+            android:layout_row="0"
+            />
+        <Button
+            android:id="@+id/btn_edit_fecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_column="1"
+            android:text="@string/editar_fecha"
 
-    <!-- TODO: Update blank fragment layout -->
+            android:layout_row="0"
+            />
+        <EditText
+            android:id="@+id/etHora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:layout_gravity="center"
+            android:text="testTime"
+            android:layout_column="0"
+            android:layout_row="1"
+            />
+        <Button
+            android:id="@+id/btn_edit_hora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:text="@string/editar_hora"
+            android:layout_gravity="end"
+            />
+    </GridLayout>
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/etComentarios"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:drawable/editbox_background"
+        />
+    <Button
+        android:id="@+id/btnMandarReporte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:text="@string/generar_reporte"
+        />
+</LinearLayout>

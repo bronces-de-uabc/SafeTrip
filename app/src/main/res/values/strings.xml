@@ -11,4 +11,16 @@
         <item>Informacion</item>
     </string-array>
     <string name="title_activity_maps">Map</string>
+    <string name="lista_siniestros">
+        <item>Asalto con Arma Blanca</item>
+        <item>Asalto a Mano Armada</item>
+        <item>Daño Total o Parcial a un Vehiculo</item>
+        <item>Robo de Objetos dentro del Vehiculo</item>
+        <item>Robo del Vehiculo</item>
+        <item>Secuestro</item>
+    </string>
+    <string name="siniestros">Siniestros</string>
+    <string name="editar_fecha">Editar Fecha</string>
+    <string name="editar_hora">Editar Hora</string>
+    <string name="generar_reporte">Generar Reporte</string>
 </resources>
