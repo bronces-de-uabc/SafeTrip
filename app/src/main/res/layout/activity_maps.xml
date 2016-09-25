@@ -21,9 +21,8 @@
             android:layout_gravity="bottom|end"
             android:layout_margin="@dimen/fab_margin"
             android:focusable="false"
-
             android:forceHasOverlappingRendering="true"
-            app:srcCompat="@android:drawable/ic_dialog_email" />
+            app:srcCompat="@mipmap/ic_launcher_alert" />
     </fragment>
 
 </LinearLayout>
