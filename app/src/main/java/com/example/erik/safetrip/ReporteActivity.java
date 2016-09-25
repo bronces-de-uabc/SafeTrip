@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -16,6 +17,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
 
 public class ReporteActivity extends AppCompatActivity {
     private Spinner spinnerSiniestro;
@@ -43,7 +45,10 @@ public class ReporteActivity extends AppCompatActivity {
         btnEditarHora = (Button) findViewById(R.id.btn_edit_fecha);
         btnEditarFecha = (Button) findViewById(R.id.btn_edit_fecha);
         btnMandarReporte = (Button) findViewById(R.id.btnMandarReporte);
-
+        ArrayList<String> spinnerArray = new ArrayList<String>(R.array.siniestros_list);
+        ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, spinnerArray); //selected item will look like a spinner set from XML
+        spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerSiniestro.setAdapter(spinnerArrayAdapter);
         btnEditarFecha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

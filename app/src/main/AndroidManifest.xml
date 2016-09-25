@@ -60,7 +60,9 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"
             android:parentActivityName=".MainActivity"/>
-        <activity android:name=".ReporteActivity" />
+        <activity android:name=".ReporteActivity"
+            android:parentActivityName=".MapsActivity"
+            />
     </application>
 
 </manifest>
