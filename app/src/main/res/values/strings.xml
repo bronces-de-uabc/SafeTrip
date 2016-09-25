@@ -31,4 +31,9 @@
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_main2">Main2Activity</string>
+    <string name="siniestros">siniestros</string>
+    <string name="editar_fecha">Editar Fecha</string>
+    <string name="editar_hora">Editar Hora</string>
+    <string name="generar_reporte">Generar Reporte</string>
+    <string name="ver_mapa">Ver Mapa</string>
 </resources>
