@@ -1,9 +1,83 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.erik.safetrip.InformacionFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bronces de Soporte"
+        android:textSize="25dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Universidad Autonoma de Baja California"
+        android:textSize="25dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aplicacion: safe trip"
+        android:textSize="25dp"
+        />
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:text="Integrantes:"
+         android:textSize="25dp"
+        />
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:text="Ivonne Gomez Rios"
+         android:textSize="15dp"
+        />
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:text="Erik Macias Hernandez"
+         android:textSize="15dp"
+        />
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:text="Benjamin Rosales Garcia"
+         android:textSize="15dp"
+        />
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:text="Raimundo Resendez Garcia"
+         android:textSize="15dp"
+        />
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:text="Pablo Angel Rios Salazar"
+         android:textSize="15dp"
+        />
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:text="Safe Trip es una apliación creada para y por cuidadanos de la ciudad de Tijuana,
+            Baja Caliornia y sus visitentes con el objetivo de crear una comunidad de colaboracion para la
+            prevención de incidentes y agreciones que perjudiquen a la misma comunidad" />
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
 
     <!-- TODO: Update blank fragment layout -->
 
-</FrameLayout>
+</LinearLayout>
